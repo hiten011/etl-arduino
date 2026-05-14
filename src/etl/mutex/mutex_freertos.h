@@ -31,13 +31,8 @@ SOFTWARE.
 
 #include "../platform.h"
 
-#if defined(ESP_PLATFORM) || defined(ARDUINO_ARCH_ESP32)
-  #include "freertos/FreeRTOS.h"
-  #include "freertos/semphr.h"
-#else
-  #include "FreeRTOS.h"
-  #include <semphr.h>
-#endif
+#include <freertos/FreeRTOS.h>
+#include <freertos/semphr.h>
 
 namespace etl
 {
